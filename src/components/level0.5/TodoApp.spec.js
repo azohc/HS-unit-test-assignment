@@ -5,9 +5,10 @@ import TodoApp from './TodoApp.vue';
 test('renders a todo', () => {
   const wrapper = mount(TodoApp);
 
+  const todoItem = wrapper.vm.todos[0];
   const todo = wrapper.get('[data-test="todo"]');
 
-  expect(todo.text()).toBe('Learn Vue.js 3');
+  expect(todo.text()).toBe(todoItem.text);
 });
 
 /*
