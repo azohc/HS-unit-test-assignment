@@ -18,6 +18,7 @@ describe('FetchOnMounted.vue', () => {
   });
 
   it('calls yesno API on mounted', () => {
+    fetchSpy.mockReturnValue = {};
     mount(FetchOnMounted);
     expect(fetchSpy).toBeCalledTimes(1);
     expect(fetchSpy).toBeCalledWith('https://yesno.wtf/api');
@@ -38,6 +39,7 @@ describe('FetchOnMounted.vue', () => {
     await flushPromises();
     const img = wrapper.find('img');
     expect(img.attributes('src')).toBe('test');
+    expect(wrapper.text()).not.toContain('loading');
   });
 
   it('shows loading message', async () => {
