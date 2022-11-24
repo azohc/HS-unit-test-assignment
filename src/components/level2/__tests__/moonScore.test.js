@@ -7,7 +7,7 @@ describe('getMoonScore', () => {
     expect(score).toBe('');
   });
 
-  // TODO: Add missing test cases here
+  // Add missing test cases here
   // for ALL possible outputs of this helper function
   // Tip: don't repeat implementation details in the test
   // just rely on inputs/outputs

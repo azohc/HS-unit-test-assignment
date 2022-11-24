@@ -52,7 +52,7 @@ describe('MovieCard.vue', () => {
     expect(regularCard.text()).toContain('22');
   });
 
-  // TODO: test event favorite-selected is being emitted on button click
+  // Test event favorite-selected is being emitted on button click
   it("'s button emits a 'favorite-selected' event", async () => {
     const favoriteCard = mount(MovieCard, {
       props: {

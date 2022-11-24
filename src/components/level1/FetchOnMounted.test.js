@@ -2,7 +2,7 @@ import { expect, it, describe, vi, afterEach } from 'vitest';
 import { flushPromises, mount } from '@vue/test-utils';
 import FetchOnMounted from './FetchOnMounted.vue';
 
-// TODO: TDD Exercise: complete the implementation of the component FetchOnMounted
+// TDD Exercise: complete the implementation of the component FetchOnMounted
 // so all tests pass
 describe('FetchOnMounted.vue', () => {
   const fetchSpy = vi.fn();

@@ -8,9 +8,7 @@ const movies = dataService.getMovies();
 const favoriteMovieId = ref('');
 
 function setFavoriteMovieId(id) {
-  console.log('sfm', id);
   favoriteMovieId.value = id;
-  // TODO what tf do i do to make select's option :checked?
 }
 </script>
 
