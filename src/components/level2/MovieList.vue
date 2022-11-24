@@ -5,22 +5,28 @@ import dataService from './utils/dataService';
 
 const movies = dataService.getMovies();
 
-function setFavoriteMovie() {}
-const favoriteMovie = ref('');
+const favoriteMovieId = ref('');
+
+function setFavoriteMovieId(id) {
+  console.log('sfm', id);
+  favoriteMovieId.value = id;
+  // TODO what tf do i do to make select's option :checked?
+}
 </script>
+
 <template>
   <div class="movie-list">
     <MovieCard
       v-for="movie in movies"
       :movie="movie"
       :key="movie.id"
-      :favorite-movie="favoriteMovie"
-      @favorite-selected="setFavoriteMovie"
+      :favorite-movie="favoriteMovieId"
+      @favorite-selected="setFavoriteMovieId"
     />
   </div>
   <div class="controls">
     Favorite Selector
-    <select v-model="favoriteMovie">
+    <select v-model="favoriteMovieId">
       <option v-for="movie in movies" :key="movie.id" :value="movie.id">
         {{ movie.title }}
       </option>
