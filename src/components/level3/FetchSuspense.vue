@@ -2,7 +2,9 @@
 import { ref } from 'vue';
 const response = ref({});
 
+console.log('prefetch');
 const res = await fetch('https://yesno.wtf/api');
+console.log('post fetch', res);
 if (!res.ok) {
   throw new Error('load');
 }
